@@ -3,7 +3,7 @@
 function min(inArray) {
     // We do this by stepping through each entry of the array.
     // First, set the minimum to be the first value in the array.
-    let min = inArray[/*insert the appropriate value here*/];
+    let min = inArray[0];
 
     // Now go through all the remaining entries of the array
     // and determine if the current entry should become the new minimum
@@ -15,28 +15,60 @@ function min(inArray) {
     }
 
     // Now that the for loop has finished, log the minimum to the console.
-    console.log(/* Put the appropriate variable here */);
+    console.log('The minimum value is ' + min + '.');
 }
 
-// The function max will take in an array and log its maximum value.
-function max(inArray) {
 
+function max(inArray) {
+    let max = inArray[0]
+
+    // Now go through all the remaining entries of the array
+    // and determine if the current entry should become the new minimum
+    for (let i = 1; i < inArray.length; i += 1) {
+        // If the current value is less than the minimum then it becomes the new minimum
+        if (inArray[i] > max) {
+            max = inArray[i];
+        }
+    }
+
+    // Now that the for loop has finished, log the minimum to the console.
+    console.log('The maximum value is ' + max + '.');
 }
 
 // The function sum will take in an array and log the sum of the array.
 function sum(inArray) {
+    let sum = inArray[0]
 
+    // Now go through all the remaining entries of the array
+    // and determine if the current entry should become the new minimum
+    for (let i = 1; i < inArray.length; i += 1) {
+        // If the current value is less than the minimum then it becomes the new minimum
+        sum = sum + inArray[i];
+    }
+
+    // Now that the for loop has finished, log the minimum to the console.
+    console.log('The sum of the array is ' + sum + '.');
 }
 
 // The function average will take in an array and log the average of the values.
 function average(inArray) {
+    let sum = inArray[0]
 
+    // Now go through all the remaining entries of the array
+    // and determine if the current entry should become the new minimum
+    for (let i = 1; i < inArray.length; i += 1) {
+        // If the current value is less than the minimum then it becomes the new minimum
+        sum = sum + inArray[i];
+
+    }
+    avg = sum / inArray.length
+    console.log('The average of the array is ' + avg + '.');
 }
 
 
 
-//Try out your function here.
-const testArray = [1, 4, 5, 6, 9];
+
+const testArray = [6, 4, 9, 1, 5];
 min(testArray);
 max(testArray);
 sum(testArray);
