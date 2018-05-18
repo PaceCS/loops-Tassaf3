@@ -1,8 +1,36 @@
 // The input to sum35While is a number.
 // The function outputs the sum of all multiples of 3 and 5 that are less than that number.
 
-function sum35While(N) {
+function sum35While(userInput) {
+    let sum = 0;
+    let multiples = 0;
+    let counter = 1;
 
+    while (counter < userInput) {
+        let div3;
+        let div5;
+        if  (counter % 3 == 0) {
+            div3 = true;
+        } else {
+            div3 = false;
+        }
+
+        if  (counter % 5 == 0) {
+            div5 = true;
+        } else {
+            div5 = false;
+        }
+
+        if (div3 == true || div5 == true) {
+            sum = sum + counter
+            multiples = multiples + 1
+        }
+
+        counter += 1;
+    }
+
+    console.log('There are ' + multiples + ' multiples of 3 and 5 that are less than ' + userInput + '.');
+    console.log('Their sum is ' + sum + '.');
 }
 
 //Try out your function here.
